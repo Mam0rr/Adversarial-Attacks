@@ -76,8 +76,8 @@ def attack(model, X, y, epsilon, device):
     loss = F.nll_loss(output, y)
     loss.backward()
     data_grad = X.grad.data
-    X_adv = X + epsilon * data_grad.sign()
-    return X_adv
+    new_X = X + epsilon * data_grad.sign()
+    return new_X
 
 # Training function
 def train(args, model, device, train_loader, optimizer):
