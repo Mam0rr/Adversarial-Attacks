@@ -1,5 +1,5 @@
 
-#Go to line 68 to view the code just for the adversarial training
+#Go to line 70 to view the code just for the adversarial training
 
 import torch
 import torch.nn as nn
