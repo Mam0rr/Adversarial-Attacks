@@ -1,3 +1,6 @@
+
+#Go to line 74 to view the code just for the adversarial training
+
 import torch
 import torch.nn as nn
 import torch.nn.functional as F
@@ -69,7 +72,6 @@ class Net(nn.Module):
         return output
 
 def pgd_attack(model, x, y, epsilon=0.1, alpha=0.01, num_iter=40):
-
     # Clone the input tensor and initialize adversarial example
     x_adv = x.clone().detach().to(x.device)
     original_x = x.clone().detach().to(x.device)  # Keep original inputs for clamping
